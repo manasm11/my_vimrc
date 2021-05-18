@@ -1,3 +1,9 @@
+" use colors that suit a dark background
+set background=dark
+
+" set the window’s title, reflecting the file currently being edited
+set title
+
 " enable syntax highlighting
 syntax enable
 
@@ -33,6 +39,29 @@ set incsearch
 
 " enable search highlighting
 set hlsearch
+
+" avoid wrapping a line in the middle of a word
+set linebreak
+
+" the number of screen lines to keep above and below the cursor
+set scrolloff=1
+
+" the number of screen columns to keep to the left and right of the cursor
+set sidescrolloff=5
+
+" enable line wrapping
+set wrap
+
+" display command line’s tab complete options as a menu
+set wildmenu
+
+" enable spellchecking
+set spell
+
+" ignore files matching these patterns when opening files based on a glob pattern
+set wildignore+=.pyc,.swp
+
+
 
 " F9 to run python code
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
