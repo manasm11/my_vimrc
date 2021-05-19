@@ -62,7 +62,7 @@ set wrap
 set wildmenu
 
 " enable spellchecking
-set spell
+"set spell
 
 " ignore files matching these patterns when opening files based on a glob pattern
 set wildignore+=.pyc,.swp
@@ -75,6 +75,9 @@ set showcmd
 
 " save backup before saving
 set backup
+
+" creating backup directory
+silent !mkdir -p ~/.cache/vim
 
 " directory to store backup files
 set backupdir=~/.cache/vim
