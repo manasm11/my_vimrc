@@ -1,6 +1,7 @@
 " use colors that suit a dark background
 set background=dark
 
+
 " set the window’s title, reflecting the file currently being edited
 set title
 
@@ -77,17 +78,25 @@ set showcmd
 set backup
 
 " creating backup directory
-silent !mkdir -p ~/.cache/vim
+silent !mkdir -p .cache
 
 " directory to store backup files
-set backupdir=~/.cache/vim
+set backupdir=.cache
 
+" extension for backup files
+execute "set backupext=.". strftime("%T")
 
 " show dialog before closing unsaved file
 set confirm
 
 " \p to type print statement
 map <leader>p iprint(f"")<esc>hi
+
+" \b to type !#/bin/bash
+map <leader>b i#!/bin/bash<cr><cr>
+
+" \"" to type print statement
+map <leader>" i""<esc>i
 
 " <F6> to quit file
 map <F6> :q<cr>
